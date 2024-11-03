@@ -18,12 +18,15 @@ Europe, iFog - 🇨🇭 Zurich, Switzerland : https://eu.priv.au/
 
 Europe, Lagrange - 🇬🇧 London, United Kingdom : https://eu2.priv.au/
 
-Asia, Vultr - 🇸🇬 Singapore : https://as.priv.au/
+Asia, DigitalOcean - 🇸🇬 Singapore : https://as.priv.au/
 
 Asia, DigitalOcean - 🇮🇳 Bangalore, India : https://as2.priv.au/
 
 Australia, DigitalOcean - 🇦🇺 Sydney, Australia : https://au.priv.au/
 
+Australia, Vultr - 🇦🇺 Melbourne, Australia : https://au2.priv.au/
+
+Australia, BinaryLane - 🇦🇺 Perth, Australia : https://au3.priv.au/
 
 ## FAQ
 
@@ -37,7 +40,7 @@ If Qwant is returning an 'Access Denied' error, you're most likely connecting to
 
 ## Basic Usage
 
-* ```docker run -d --restart always -p 127.0.0.1:8080:8080 --name searxng vojkovic/searxng:production```
+* ```docker run -d --restart always -p 127.0.0.1:8080:8080 --name searxng ghcr.io/privau/searxng```
 
 * Visit `http://127.0.0.1:8080` in your browser, stop the server with `Ctrl` + `C`.
 
@@ -49,7 +52,7 @@ If Qwant is returning an 'Access Denied' error, you're most likely connecting to
 
 * Build the static files by running `update.sh`. This step requires python, npm and make. It's recommended to run this within the development container.
 
-* You can build the docker container locally by running (check out the base branch for the alpine base with the needed python packages): ```docker build --pull -f ./Dockerfile -t searxng-dev:latest .```
+* You can build the docker container locally by running: ```docker build --pull -f ./Dockerfile -t searxng-dev:latest .```
 
 * Run the local container with: ```docker run -it --rm -p 8080:8080 searxng-dev:latest```
 
